@@ -74,36 +74,34 @@ export default function Home() {
                         </div>
                     ) : null}
                 </div>
-
-                <div
-                    className={`${styles.container} ${
-                        open ? styles.containermobile : null
-                    }`}
-                >
-                    <div className={styles.intro}>
-                        <h1 className={styles.main}>
-                            Next generation digital banking
-                        </h1>
-                        <p>
-                            Take your financial life online. Your Easybank
-                            account will be a one-stop-shop for spending,
-                            saving, budgeting, investing, and much more.
-                        </p>
-
-                        <Button />
-                    </div>
-
-                    <div className={styles.mock}>
-                        <div>
-                            <img
-                                src="/images/image-mockups.png"
-                                alt="image"
-                                className={styles.display}
-                            />
-                        </div>
-                    </div>
-                </div>
             </header>
+
+            <div
+                className={`${styles.container} ${
+                    open ? styles.containermobile : null
+                }`}
+            >
+                <div className={styles.intro}>
+                    <h1 className={styles.main}>
+                        Next generation digital banking
+                    </h1>
+                    <p>
+                        Take your financial life online. Your Easybank account
+                        will be a one-stop-shop for spending, saving, budgeting,
+                        investing, and much more.
+                    </p>
+
+                    <Button />
+                </div>
+
+                <div className={styles.mock}>
+                    <img
+                        src="/images/image-mockups.png"
+                        alt="image"
+                        className={styles.display}
+                    />
+                </div>
+            </div>
 
             <section className={`${styles.wrap} ${styles.greybackground}`}>
                 <div className={styles.info}>
