@@ -1,0 +1,21 @@
+.button {
+    border: 1px solid hotpink;
+    outline: none;
+    background: linear-gradient(
+        to right,
+        hsl(136, 65%, 51%),
+        hsl(192, 70%, 51%)
+    );
+    color: var(--White);
+    font-family: "public";
+    font-weight: 400;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    max-width: 150px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: var(--BrightCyan);
+}

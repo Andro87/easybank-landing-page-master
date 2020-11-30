@@ -1,0 +1,42 @@
+.boxarticle {
+    border: 1px solid lightcoral;
+    display: grid;
+    grid-template-rows: 55% 45%;
+    background-color: var(--White);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.image {
+    border: 1px solid magenta;
+    display: flex;
+}
+
+.details {
+    border: 1px solid orangered;
+    padding: 13px;
+    font-size: 0.8rem;
+}
+
+.information {
+    font-family: "public";
+    font-weight: 400;
+    color: var(--DarkBlue);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.information:hover {
+    color: var(--BrightCyan);
+    cursor: pointer;
+}
+
+.author {
+    font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .details {
+        text-align: start;
+    }
+}
