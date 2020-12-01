@@ -1,5 +1,4 @@
 .boxinfo {
-    border: 1px solid rosybrown;
     display: flex;
     flex-direction: column;
 }
@@ -13,8 +12,9 @@
     font-size: 1.2rem;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 990px) {
     .boxinfo {
         align-items: center;
+        max-width: 560px;
     }
 }

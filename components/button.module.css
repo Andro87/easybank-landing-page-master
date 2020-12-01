@@ -1,5 +1,4 @@
 .button {
-    border: 1px solid hotpink;
     outline: none;
     background: linear-gradient(
         to right,
@@ -13,6 +12,7 @@
     font-size: 0.8rem;
     border-radius: 30px;
     max-width: 150px;
+    border: none;
 }
 
 .button:hover {

@@ -1,23 +1,21 @@
 .header {
-    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navigation {
-    border: 1px solid magenta;
     padding: 15px 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width: 100%;
 }
 
 .logo {
     height: 18px;
     width: auto;
-}
-
-.link {
-    border: 1px solid lawngreen;
 }
 
 .link a {
@@ -32,11 +30,46 @@
     font-weight: 400;
     color: var(--DarkBlue);
     border-bottom: 2px solid hsl(192, 70%, 51%);
-    padding-bottom: 15px; /*rivedere*/
+    padding-bottom: 15px;
 }
 
+.home_wrap {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    max-width: 700px;
+    width: 65%;
+}
+
+.phone img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: -15%;
+}
+
+.phone::after {
+    content: "";
+    background: url("../public/images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: -21%;
+    right: 12%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
 .container {
-    border: 1px solid olive;
     display: grid;
     grid-template-columns: 40% 60%;
     background-color: var(--VeryLightGrey);
@@ -45,7 +78,6 @@
 }
 
 .intro {
-    border: 1px solid aqua;
     margin-left: 95px;
     padding-top: 130px;
     padding-bottom: 115px;
@@ -62,39 +94,12 @@
     color: var(--DarkBlue);
 }
 
-.mock {
-    max-width: 100%;
-    top: 0;
-    right: -100px;
-    border: 1px solid green;
-}
-.mock::after {
-    content: "";
-    background: url("../public/images/bg-intro-desktop.svg") 0% 50%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-}
-.display {
-    border: 1px solid teal;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 .wrap {
-    border: 1px solid red;
-    padding: 60px 95px;
+    padding: 60px 95px 90px 95px;
 }
 
 .lightbackground {
-    background-color: var(---VeryLightGray);
+    background-color: var(--VeryLightGray);
 }
 
 .greybackground {
@@ -102,13 +107,11 @@
 }
 
 .info {
-    border: 1px solid rebeccapurple;
     width: 50%;
     margin-top: 10%;
 }
 
 .grid {
-    border: 1px solid maroon;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 20px;
@@ -118,20 +121,17 @@
 .picture {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border: 3px solid yellow;
     width: 100%;
     display: flex;
 }
 
 .footer {
-    border: 1px solid orange;
     background-color: var(--DarkBlue);
     display: flex;
     justify-content: space-between;
 }
 
 .contact {
-    border: 1px solid navy;
     display: flex;
     width: 55%;
     justify-content: space-between;
@@ -147,7 +147,6 @@
 }
 
 .box {
-    border: 1px solid lawngreen;
     min-height: 80px;
     min-width: 130px;
     display: flex;
@@ -157,7 +156,6 @@
 }
 
 .social {
-    border: 1px solid aqua;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -182,14 +180,14 @@
     display: none;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 990px) {
     .navigation {
-        border: 1px solid green;
         padding: 25px;
+        width: 100%;
     }
 
     .containermobile {
-        filter: brightness(35%);
+        filter: brightness(50%);
     }
 
     .mobile {
@@ -206,7 +204,6 @@
     }
 
     .menumobile {
-        border: 1px solid yellow;
         background-color: var(--White);
         border-radius: 10px;
         display: flex;
@@ -215,10 +212,10 @@
         align-items: center;
         justify-content: space-between;
         position: absolute;
-        top: 100px;
+        top: 60px;
         z-index: 2;
-        width: 200px;
-        height: 200px;
+        width: 80%;
+        min-height: 300px;
     }
 
     .menumobile a {
@@ -233,14 +230,21 @@
         font-weight: 400;
         color: var(--DarkBlue);
         border-bottom: 2px solid hsl(192, 70%, 51%);
-        padding-bottom: 15px; /*rivedere*/
+        padding-bottom: 15px;
     }
 
     .link {
         display: none;
     }
+
+    .phone {
+        position: relative;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        margin-top: -22%;
+    }
     .container {
-        border: 1px solid orangered;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         background-color: var(--VeryLightGrey);
@@ -261,23 +265,19 @@
         text-align: center;
     }
 
-    .mock {
-        border: 1px solid green;
+    .phone::after {
+        content: "";
+        display: block;
+        background-size: cover;
         background: url("../public/images/bg-intro-mobile.svg");
         background-repeat: no-repeat;
         background-size: cover;
         order: 1;
         width: 100%;
-    }
-
-    .display {
-        position: relative;
+        position: absolute;
+        bottom: 0;
         right: 0;
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        border: 1px solid red;
-        transform: translateY(-29%);
+        top: initial;
     }
 
     .wrap {
@@ -294,14 +294,12 @@
     }
 
     .grid {
-        border: 1px solid maroon;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin-top: 100px;
     }
 
     .contact {
-        border: 1px solid navy;
         display: flex;
         flex-direction: column;
         justify-content: center;
